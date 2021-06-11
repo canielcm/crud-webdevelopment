@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-container>
-            <v-btn @click="signOut">Sign Out</v-btn>
+            <v-btn color="primary" @click="signOut">Sign Out</v-btn>
         </v-container>
     </div>
 </template>

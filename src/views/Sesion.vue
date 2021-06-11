@@ -152,7 +152,11 @@
                           updateEvent(element);
                           dialog.value = false
                           }">Save</v-btn>
-                        <v-btn text @click="dialog.value = false">Close</v-btn>
+                        <v-btn text @click="()=>{
+                          getData();
+                          dialog.value=false
+                          closeDialog()
+                          }">Close</v-btn>
                       </v-card-actions>
                     </v-card>
                   </template>
@@ -173,14 +177,19 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 import { db } from "../main";
+import {mapMutations, mapState} from 'vuex'
 export default {
   created() {
+    
     this.getData();
     console.log(this.user);
+    
   },
   methods: {
+    ...mapMutations(['closeDialog', 'openDialog']),
     async getData() {
       try {
+        this.openDialog()
         const snapshot = await db.collection("events").get();
         const evt = [];
         let temp;
@@ -193,6 +202,7 @@ export default {
         });
         this.events = evt;
         console.log(evt);
+        this.closeDialog();
       } catch (error) {
         console.log(error);
       }
