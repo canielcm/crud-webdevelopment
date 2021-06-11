@@ -1,10 +1,7 @@
 <template>
     <div>
         <v-container>
-            <v-btn @click="signOut" v-if="loggedIn">Sign Out: yes</v-btn>
-
-            <v-btn @click="signOut" v-else>Sign Out: no</v-btn>
-            
+            <v-btn @click="signOut">Sign Out</v-btn>
         </v-container>
     </div>
 </template>
