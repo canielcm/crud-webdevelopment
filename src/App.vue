@@ -1,22 +1,6 @@
 <template>
   <v-app>
-    
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-    
-      <div  class=" d-flex align-center">
-        <router-link to="/login"><h3 class="white--text"> login |</h3></router-link>
-        <router-link to="/register"><h3 class="white--text">| register |</h3></router-link>
-        <router-link to="/sesion"><h3 class="white--text">| sesion </h3></router-link>
-        <Topheader class="mr-7" />
-
-      </div>
-     
-      <v-spacer></v-spacer>
-    </v-app-bar>
+    <Navbarvue/>
     <v-main>
       <router-view/>
     </v-main>
@@ -48,10 +32,12 @@
 
 <script>
 import Topheader from './components/Top-header'
+import Navbarvue from './components/Navbarvue.vue'
 import {mapMutations, mapState} from 'vuex'
 export default {
   components: {
       Topheader,
+      Navbarvue,
   },
   name: 'App',
   data: () => ({
