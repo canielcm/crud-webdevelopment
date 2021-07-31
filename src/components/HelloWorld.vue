@@ -4,9 +4,7 @@
       <v-container>
         <v-layout>
           <v-row 	class="hidden-sm-and-down">
-          
             <v-img  src="../resources/imghome.png"></v-img>
-          
         </v-row>
         <v-row dense>
           <v-col cols="12">

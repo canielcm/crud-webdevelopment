@@ -6,7 +6,7 @@
         <strong>{{ error.message }}</strong>  try again
       </v-alert>
       <v-form @submit.prevent="pressed">
-        <h3>Register</h3>
+        <h1>Register</h1>
         <v-text-field
           type="email"
           v-model="email"

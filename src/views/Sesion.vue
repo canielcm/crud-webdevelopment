@@ -245,7 +245,7 @@ export default {
         this.selectedOpen = false;
         this.currentlyEditing = null;
         this.dialogEdit = false;
-      } catch (error) {}
+      } catch (error){}
     },
   },
   data() {
